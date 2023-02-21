@@ -15,5 +15,10 @@ namespace Constructor
         {
             _layerType = layerType;
         }
+
+        public void SetSprite(Sprite sprite)
+        {
+            image.sprite = sprite;
+        }
     }
 }

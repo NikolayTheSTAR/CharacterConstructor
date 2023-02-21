@@ -10,16 +10,19 @@ namespace Constructor
         [SerializeField]
         private CharacterLayer[] layers = new CharacterLayer[1];
         
-        public void Init()
+        public void Init(CharacterVisual visual)
         {
-            var layerTypes = EnumUtility.GetValues<CharacterLayerType>();
+            // init layers
 
-            for (var l = 0; l < layerTypes.Length && l < layers.Length; l++)
+            CharacterLayerType layerType;
+            for (var i = 0; i < layers.Length && i < layers.Length; i++)
             {
-                var layer = layers[l];
+                var layer = layers[i];
                 if (layer == null) continue;
-                
-                layer.Init(layerTypes[l]);
+
+                layerType = (CharacterLayerType)i;
+                layer.Init(layerType);
+                layer.SetSprite(visual.GetLayerKit(layerType).Sprites[0]);
             }
         }
     }

@@ -25,7 +25,7 @@ namespace GUI
         {
             var visual = _characterVisualController.LoadArt(characterType);
             
-            layeredCharacter.Init();
+            layeredCharacter.Init(visual);
             customizationPanel.Init(visual, SetPreviousElement, SetNextElement);
             
             _settingData = new Dictionary<CharacterLayerType, int>();

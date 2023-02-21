@@ -23,6 +23,11 @@ namespace Constructor
             var layerKit = Array.Find(layerKits, (info) => info.LayerType == layerType);
             return layerKit != null && layerKit.Sprites.Length > 1;
         }
+
+        public CharacterLayerVisualKit GetLayerKit(CharacterLayerType layerType)
+        {
+            return Array.Find(layerKits, (info) => info.LayerType == layerType);
+        }
     }
     
     [Serializable]
