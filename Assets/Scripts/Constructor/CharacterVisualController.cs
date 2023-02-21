@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Constructor
@@ -5,19 +6,16 @@ namespace Constructor
     public class CharacterVisualController : MonoBehaviour
     {
         private CharacterType currentCharacterType;
-        private CharacterVisualConfig currentVisualConfig;
+        private CharacterVisual visual;
 
-        public string ConfigPath(CharacterType characterType)
-        {
-            return $"Configs/Characters/{characterType.ToString()}";
-        }
+        public string ConfigPath(CharacterType characterType) => $"Configs/Characters/{characterType.ToString()}";
         
-        public void LoadArt(CharacterType characterType)
+        public CharacterVisual LoadArt(CharacterType characterType)
         {
-            currentVisualConfig = Resources.Load<CharacterVisualConfig>(ConfigPath(characterType));
+            visual = Resources.Load<CharacterVisualConfig>(ConfigPath(characterType)).Visual;
             currentCharacterType = characterType;
-            
-            Debug.Log("Kits count: " + currentVisualConfig.Kits.Length);
+
+            return visual;
         }
     }
 }

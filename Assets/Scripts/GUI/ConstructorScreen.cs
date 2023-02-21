@@ -23,10 +23,10 @@ namespace GUI
 
         private void Init(CharacterType characterType)
         {
-            _characterVisualController.LoadArt(characterType);
+            var visual = _characterVisualController.LoadArt(characterType);
             
             layeredCharacter.Init();
-            customizationPanel.Init(SetPreviousElement, SetNextElement);
+            customizationPanel.Init(visual, SetPreviousElement, SetNextElement);
             
             _settingData = new Dictionary<CharacterLayerType, int>();
             var layerTypes = EnumUtility.GetValues<CharacterLayerType>();

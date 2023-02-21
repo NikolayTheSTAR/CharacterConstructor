@@ -7,17 +7,32 @@ namespace Constructor
     [CreateAssetMenu(menuName = "Data/CharacterVisual", fileName = "CharacterVisualConfig")]
     public class CharacterVisualConfig : ScriptableObject
     {
-        [SerializeField] private CharacterType characterType;
-        [SerializeField] private VisualKit[] kits = new VisualKit[1];
+        [SerializeField] private CharacterVisual visual;
 
-        public VisualKit[] Kits => kits;
-        
-        [Serializable]
-        public class VisualKit
+        public CharacterVisual Visual => visual;
+    }
+
+    [Serializable]
+    public class CharacterVisual
+    {
+        [SerializeField] private CharacterType characterType;
+        [SerializeField] private CharacterLayerVisualKit[] layerKits = new CharacterLayerVisualKit[1];
+
+        public bool IsAvailableToSetting(CharacterLayerType layerType)
         {
-            [SerializeField] private CharacterLayerType layerType;
-            [SerializeField] private Sprite[] sprites = new Sprite[1];
+            var layerKit = Array.Find(layerKits, (info) => info.LayerType == layerType);
+            return layerKit != null && layerKit.Sprites.Length > 1;
         }
+    }
+    
+    [Serializable]
+    public class CharacterLayerVisualKit
+    {
+        [SerializeField] private CharacterLayerType layerType;
+        [SerializeField] private Sprite[] sprites = new Sprite[1];
+        
+        public CharacterLayerType LayerType => layerType;
+        public Sprite[] Sprites => sprites;
     }
 
     public enum CharacterType

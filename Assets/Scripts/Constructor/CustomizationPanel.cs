@@ -10,20 +10,23 @@ namespace Constructor
         [SerializeField]
         private SettingLine[] settings = new SettingLine[1];
 
-        
-
-        public void Init(Action<CharacterLayerType> onPreviousClick, Action<CharacterLayerType> onNextClick)
+        public void Init(CharacterVisual visual, Action<CharacterLayerType> onPreviousClick, Action<CharacterLayerType> onNextClick)
         {
-            var layerTypes = EnumUtility.GetValues<CharacterLayerType>();
+            bool isAvailable = false;
             
-            for (var i = 0; i < layerTypes.Length; i++)
+            for (var i = 0; i < settings.Length; i++)
             {
-                // setting line
-                
                 var setting = settings[i];
                 if (setting == null) continue;
-                
-                setting.Init(layerTypes[i], onPreviousClick, onNextClick);
+
+                isAvailable = visual.IsAvailableToSetting((CharacterLayerType)i);
+
+                if (isAvailable)
+                {
+                    setting.gameObject.SetActive(true);
+                    setting.Init((CharacterLayerType)i, onPreviousClick, onNextClick);
+                }
+                else setting.gameObject.SetActive(false);
             }
         }
     }
