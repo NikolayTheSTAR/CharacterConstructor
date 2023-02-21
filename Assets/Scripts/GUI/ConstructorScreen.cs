@@ -5,12 +5,13 @@ using Constructor;
 using TheSTAR.Utility;
 using Zenject;
 
-namespace GUI
+namespace Gui
 {
     public class ConstructorScreen : MonoBehaviour
     {
         [SerializeField] private LayeredCharacter layeredCharacter;
         [SerializeField] private CustomizationPanel customizationPanel;
+        [SerializeField] private CharacterDressingContainer dressContainer;
 
         [Inject] private CharacterVisualController _characterVisualController;
         
@@ -35,12 +36,34 @@ namespace GUI
 
         private void SetPreviousElement(CharacterLayerType layerType)
         {
-            _settingData[layerType]--;
+            if (dressContainer.Dressing) return;
+            
+            var tempIndex = _settingData[layerType] - 1;
+            if (tempIndex < 0) tempIndex = _characterVisualController.GetLayerSpritesCount(layerType) - 1;
+            _settingData[layerType] = tempIndex;
+            
+            AnimateDress(layerType);
         }
         
         private void SetNextElement(CharacterLayerType layerType)
         {
-            _settingData[layerType]++;
+            if (dressContainer.Dressing) return;
+            
+            var tempIndex = _settingData[layerType] + 1;
+            if (tempIndex > _characterVisualController.GetLayerSpritesCount(layerType) - 1) tempIndex = 0;
+            _settingData[layerType] = tempIndex;
+            
+            AnimateDress(layerType);
+        }
+
+        private void AnimateDress(CharacterLayerType layerType)
+        {
+            dressContainer.AnimateDress(() =>
+            {
+                var index = _settingData[layerType];
+                var sprite = _characterVisualController.GetSprite(layerType, index);
+                layeredCharacter.SetSprite(layerType, sprite);
+            });
         }
     }
 }

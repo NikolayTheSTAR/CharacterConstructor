@@ -6,16 +6,20 @@ namespace Constructor
     public class CharacterVisualController : MonoBehaviour
     {
         private CharacterType currentCharacterType;
-        private CharacterVisual visual;
+        private CharacterVisual currentVisual;
 
         public string ConfigPath(CharacterType characterType) => $"Configs/Characters/{characterType.ToString()}";
         
         public CharacterVisual LoadArt(CharacterType characterType)
         {
-            visual = Resources.Load<CharacterVisualConfig>(ConfigPath(characterType)).Visual;
+            currentVisual = Resources.Load<CharacterVisualConfig>(ConfigPath(characterType)).Visual;
             currentCharacterType = characterType;
 
-            return visual;
+            return currentVisual;
         }
+
+        public Sprite GetSprite(CharacterLayerType layerType, int index) => currentVisual.GetLayerKit(layerType).Sprites[index];
+
+        public int GetLayerSpritesCount(CharacterLayerType layerType) => currentVisual.GetLayerKit(layerType).Sprites.Length;
     }
 }

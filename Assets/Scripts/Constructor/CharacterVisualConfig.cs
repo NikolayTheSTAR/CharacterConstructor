@@ -16,7 +16,7 @@ namespace Constructor
     public class CharacterVisual
     {
         [SerializeField] private CharacterType characterType;
-        [SerializeField] private CharacterLayerVisualKit[] layerKits = new CharacterLayerVisualKit[1];
+        [SerializeField] private CharacterLayerVisualKit[] layerKits = new CharacterLayerVisualKit[0];
 
         public bool IsAvailableToSetting(CharacterLayerType layerType)
         {
@@ -26,7 +26,8 @@ namespace Constructor
 
         public CharacterLayerVisualKit GetLayerKit(CharacterLayerType layerType)
         {
-            return Array.Find(layerKits, (info) => info.LayerType == layerType);
+            // layerKits must be pre-sorted
+            return layerKits[(int)layerType];
         }
     }
     

@@ -25,6 +25,11 @@ namespace Constructor
                 layer.SetSprite(visual.GetLayerKit(layerType).Sprites[0]);
             }
         }
+
+        public void SetSprite(CharacterLayerType layerType, Sprite sprite)
+        {
+            layers[(int)layerType].SetSprite(sprite);
+        }
     }
 
     public enum CharacterLayerType
