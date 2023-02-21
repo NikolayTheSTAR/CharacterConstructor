@@ -1,9 +1,11 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Constructor
 {
+    /// <summary>
+    /// One layer of LayeredCharacter
+    /// </summary>
     public class CharacterLayer : MonoBehaviour
     {
         [SerializeField]

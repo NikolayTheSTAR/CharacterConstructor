@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 namespace Constructor
 {
-    [CreateAssetMenu(menuName = "Data/CharacterVisual", fileName = "CharacterVisualConfig")]
+    [CreateAssetMenu(menuName = "Config/CharacterVisual", fileName = "CharacterVisualConfig")]
     public class CharacterVisualConfig : ScriptableObject
     {
         [SerializeField] private CharacterVisual visual;

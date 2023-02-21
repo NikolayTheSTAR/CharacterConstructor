@@ -9,16 +9,15 @@ namespace Constructor
         [SerializeField] private Transform rightDot;
 
         private int _dressLeanTweenID = -1;
-        private bool _dressing = false;
-        
+
         private const float MoveTime = 0.5f;
 
-        public bool Dressing => _dressing;
+        public bool Dressing { get; private set; } = false;
 
         [ContextMenu("AnimateDress")]
         public void AnimateDress(Action dressAction)
         {
-            if (_dressing) return;
+            if (Dressing) return;
             
             if (_dressLeanTweenID != -1)
             {
@@ -33,11 +32,11 @@ namespace Constructor
                 _dressLeanTweenID = LeanTween.move(character.gameObject, transform, MoveTime).setOnComplete(() =>
                 {
                     _dressLeanTweenID = -1;
-                    _dressing = false;
+                    Dressing = false;
                 }).id;
             }).id;
 
-            _dressing = true;
+            Dressing = true;
         }
     }
 }

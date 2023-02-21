@@ -5,6 +5,9 @@ using TMPro;
 
 namespace Constructor
 {
+    /// <summary>
+    /// Setting for one character layer type
+    /// </summary>
     public class SettingLine : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI title;
@@ -21,6 +24,12 @@ namespace Constructor
             
             buttonPrevious.Init(() => onPreviousClick(_layerType));
             buttonNext.Init(() => onNextClick(_layerType));
+        }
+
+        public void SetArrowsView(bool isVisible)
+        {
+            buttonPrevious.gameObject.SetActive(isVisible);
+            buttonNext.gameObject.SetActive(isVisible);
         }
     }
 }

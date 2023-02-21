@@ -1,13 +1,15 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Constructor;
 using TheSTAR.Utility;
 using Zenject;
 
-namespace Gui
+namespace TheSTAR.GUI.Screens
 {
-    public class ConstructorScreen : MonoBehaviour
+    /// <summary>
+    /// Character customization screen
+    /// </summary>
+    public class ConstructorScreen : GuiScreen
     {
         [SerializeField] private LayeredCharacter layeredCharacter;
         [SerializeField] private CustomizationPanel customizationPanel;
@@ -17,12 +19,7 @@ namespace Gui
         
         private Dictionary<CharacterLayerType, int> _settingData;
 
-        private void Start()
-        {
-            Init(CharacterType.Naomi);
-        }
-
-        private void Init(CharacterType characterType)
+        public void Init(CharacterType characterType)
         {
             var visual = _characterVisualController.LoadArt(characterType);
             
@@ -34,6 +31,8 @@ namespace Gui
             for (var i = 0; i < layerTypes.Length; i++) _settingData.Add((CharacterLayerType)i, 0);
         }
 
+        #region Dressing
+        
         private void SetPreviousElement(CharacterLayerType layerType)
         {
             if (dressContainer.Dressing) return;
@@ -65,5 +64,7 @@ namespace Gui
                 layeredCharacter.SetSprite(layerType, sprite);
             });
         }
+
+        #endregion
     }
 }

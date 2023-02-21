@@ -5,6 +5,9 @@ using UnityEngine.Serialization;
 
 namespace Constructor
 {
+    /// <summary>
+    /// Visual character with multi layers
+    /// </summary>
     public class LayeredCharacter : MonoBehaviour
     {
         [SerializeField]
@@ -12,8 +15,6 @@ namespace Constructor
         
         public void Init(CharacterVisual visual)
         {
-            // init layers
-
             CharacterLayerType layerType;
             for (var i = 0; i < layers.Length && i < layers.Length; i++)
             {
