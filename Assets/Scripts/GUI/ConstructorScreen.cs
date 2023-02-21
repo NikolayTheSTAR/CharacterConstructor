@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Constructor;
 using TheSTAR.Utility;
+using Zenject;
 
 namespace GUI
 {
@@ -10,11 +11,20 @@ namespace GUI
     {
         [SerializeField] private LayeredCharacter layeredCharacter;
         [SerializeField] private CustomizationPanel customizationPanel;
+
+        [Inject] private CharacterVisualController _characterVisualController;
         
         private Dictionary<CharacterLayerType, int> _settingData;
 
         private void Start()
         {
+            Init(CharacterType.Naomi);
+        }
+
+        private void Init(CharacterType characterType)
+        {
+            _characterVisualController.LoadArt(characterType);
+            
             layeredCharacter.Init();
             customizationPanel.Init(SetPreviousElement, SetNextElement);
             
@@ -26,13 +36,11 @@ namespace GUI
         private void SetPreviousElement(CharacterLayerType layerType)
         {
             _settingData[layerType]--;
-            Debug.Log(_settingData[layerType].ToString());
         }
         
         private void SetNextElement(CharacterLayerType layerType)
         {
             _settingData[layerType]++;
-            Debug.Log(_settingData[layerType].ToString());
         }
     }
 }
