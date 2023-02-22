@@ -45,11 +45,11 @@ namespace Game
         /// <remarc>
         /// Not for release, demo only
         /// </remarc>
-        private void TestCharacterConstructor()
+        private async void TestCharacterConstructor()
         {
             Debug.Log("TestCharacterConstructor");
             var ctorScreen = _guiController.FindScreen<ConstructorScreen>();
-            ctorScreen.Init(CharacterType.Naomi);
+            await ctorScreen.Init(CharacterType.Naomi);
             _guiController.Show(ctorScreen);
         }
     }

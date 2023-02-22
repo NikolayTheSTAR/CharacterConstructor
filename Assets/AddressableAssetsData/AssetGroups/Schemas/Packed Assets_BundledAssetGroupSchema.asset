@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5d17a21594effb4e9591490b009e7aa, type: 3}
-  m_Name: content-characters-naomi_BundledAssetGroupSchema
+  m_Name: Packed Assets_BundledAssetGroupSchema
   m_EditorClassIdentifier: 
-  m_Group: {fileID: 11400000, guid: 48b2f07b3984c4475ac9698f2581fcd8, type: 2}
+  m_Group: {fileID: 11400000, guid: c5e6c0666a5ee40bcab4a253a5de5d4a, type: 2}
   m_InternalBundleIdMode: 1
   m_Compression: 1
   m_IncludeAddressInCatalog: 1
@@ -34,9 +34,9 @@ MonoBehaviour:
   m_RedirectLimit: -1
   m_RetryCount: 0
   m_BuildPath:
-    m_Id: b84167fc4a88a4d73b9bd1ddd66edf59
+    m_Id: 9da6845c82fcd4a06ab0aaf74fa613e9
   m_LoadPath:
-    m_Id: 2f05a802818514f6aba43e6cf772df2b
+    m_Id: 65e7510fcf82f4c8b9b8c91122743c7e
   m_BundleMode: 0
   m_AssetBundleProviderType:
     m_AssemblyName: Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

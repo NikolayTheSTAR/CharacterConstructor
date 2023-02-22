@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: fab3d92bfb7424fa89c3664eea10b7d5
+  m_DefaultGroup: 023a60b2529eb4912aa0ecf83aa87215
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_CatalogRequestsTimeout: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -30,14 +30,14 @@ MonoBehaviour:
   m_MonoScriptBundleNaming: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: b84167fc4a88a4d73b9bd1ddd66edf59
+    m_Id: 9da6845c82fcd4a06ab0aaf74fa613e9
   m_RemoteCatalogLoadPath:
-    m_Id: 2f05a802818514f6aba43e6cf772df2b
+    m_Id: 65e7510fcf82f4c8b9b8c91122743c7e
   m_ContentStateBuildPath: 
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: ad30eecd57c464f3b8378568cc2c9b0c, type: 2}
-  - {fileID: 11400000, guid: 48b2f07b3984c4475ac9698f2581fcd8, type: 2}
+  - {fileID: 11400000, guid: c5e6c0666a5ee40bcab4a253a5de5d4a, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -58,7 +58,7 @@ MonoBehaviour:
       - m_Id: b84167fc4a88a4d73b9bd1ddd66edf59
         m_Value: ServerData/[BuildTarget]
       - m_Id: 2f05a802818514f6aba43e6cf772df2b
-        m_Value: http://vh1-fm.sweb.ru/files/Content/Characters/[BuildTarget]
+        m_Value: https://fvh1-fm.sweb.ru/files/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: a51e8f21ea4fd44219c8ea03a1ee6265
       m_Name: BuildTarget

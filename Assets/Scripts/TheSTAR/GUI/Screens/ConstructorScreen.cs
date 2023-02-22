@@ -20,7 +20,7 @@ namespace TheSTAR.GUI.Screens
         
         private Dictionary<CharacterLayerType, int> _settingData;
 
-        public async void Init(CharacterType characterType)
+        public async Task Init(CharacterType characterType)
         {
             var loadVisualTask = _characterVisualController.LoadArt(characterType);
 
