@@ -18,6 +18,8 @@ namespace Constructor
         [SerializeField] private CharacterType characterType;
         [SerializeField] private CharacterLayerVisualKit[] layerKits = new CharacterLayerVisualKit[0];
 
+        public CharacterLayerVisualKit[] LayerKits => layerKits;
+
         public bool IsAvailableToSetting(CharacterLayerType layerType)
         {
             var layerKit = Array.Find(layerKits, (info) => info.LayerType == layerType);

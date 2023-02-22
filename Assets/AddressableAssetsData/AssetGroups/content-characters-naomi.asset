@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: content-characters-naomi
+  m_EditorClassIdentifier: 
+  m_GroupName: content-characters-naomi
+  m_Data:
+    m_SerializedData: []
+  m_GUID: fab3d92bfb7424fa89c3664eea10b7d5
+  m_SerializeEntries:
+  - m_GUID: 3fe0c7bcfc4814e109dfa5911752bfc6
+    m_Address: Assets/Resources/Configs/Characters/Naomi.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: be0615c73452b424aa21408757b349b3
+    m_Address: Assets/Sprites/Characters/Naomi/Body/body.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 73cb89e09dc8e4419bcd955c1cef027b
+    m_Address: Assets/Sprites/Characters/Naomi/Clothing/clothes1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7fa8fbe3526234c6d8b3a853e953161f
+    m_Address: Assets/Sprites/Characters/Naomi/Clothing/clothes2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b3d45188915634996be13df2923d07d1
+    m_Address: Assets/Sprites/Characters/Naomi/Clothing/undewear.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7230d83ded0df4f3d9026f8736452550
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/angry.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d9ad37a2aae8049218a2d4129a1f0ee0
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/confusion.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c03ab9fa5ddb74e768a91f1de6c1830a
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/flirt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dd7ca6ec5eb6a4c6eb172bde08e60113
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/fuu.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fbb8ae5f6343b4bcc9cc176ed483f9ce
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/gordost.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9a90a509b9a464d329a502d81512e07f
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/neutral.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eeb48f0e805194aba93ce793d1b47a96
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/sad.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 35128676a0f0a42df96b28f468524b16
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/shock.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2fd8ad43c8fe54717a05c98da02e420d
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/smile.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 954255bc677384f78a800a4d7b7a98c7
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/yazva.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 99d8425e452244e7cba780d859aedec2
+    m_Address: Assets/Sprites/Characters/Naomi/Emotions/you_die.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fc7c3a422dc674e6d83735186d212e76
+    m_Address: Assets/Sprites/Characters/Naomi/Hair/hair.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6a5504a4038c0472dbb9f6ae3a2528e2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d4ed5ab672ea04d1fb17e19540c4f760, type: 2}
+    - {fileID: 11400000, guid: ea5230222351d420f9e7f4ef1ceee9d0, type: 2}

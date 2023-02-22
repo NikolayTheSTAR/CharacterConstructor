@@ -18,6 +18,7 @@ MonoBehaviour:
     - layerType: 0
       sprites:
       - {fileID: 21300000, guid: be0615c73452b424aa21408757b349b3, type: 3}
+      - {fileID: 21300000, guid: be0615c73452b424aa21408757b349b3, type: 3}
     - layerType: 1
       sprites:
       - {fileID: 21300000, guid: b3d45188915634996be13df2923d07d1, type: 3}

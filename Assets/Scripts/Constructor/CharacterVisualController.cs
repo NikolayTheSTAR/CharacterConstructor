@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using Zenject;
 
 namespace Constructor
 {
@@ -11,17 +14,25 @@ namespace Constructor
         private Dictionary<CharacterType, CharacterVisual> _loadedCharacterVisuals;
         private CharacterVisual CurrentVisual => _loadedCharacterVisuals[_currentCharacterType];
 
+        [Inject] private AddressablesManager _addressablesManager;
+
         public void Init()
         {
             _loadedCharacterVisuals = new Dictionary<CharacterType, CharacterVisual>();
         }
         
-        private string ConfigPath(CharacterType characterType) => $"Configs/Characters/{characterType.ToString()}";
+        //private string ConfigPath(CharacterType characterType) => $"Configs/Characters/{characterType.ToString()}";
         
-        public CharacterVisual LoadArt(CharacterType characterType)
+        public async Task<CharacterVisual> LoadArt(CharacterType characterType)
         {
             if (!_loadedCharacterVisuals.Keys.Contains(characterType))
-                _loadedCharacterVisuals.Add(characterType, Resources.Load<CharacterVisualConfig>(ConfigPath(characterType)).Visual);
+            {
+                Task<CharacterVisualConfig> task = _addressablesManager.LoadCharacterVisual();
+
+                await task;
+                
+                _loadedCharacterVisuals.Add(characterType, task.Result.Visual);
+            }
             
             _currentCharacterType = characterType;
 

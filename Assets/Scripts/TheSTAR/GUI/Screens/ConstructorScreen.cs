@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using Constructor;
 using TheSTAR.Utility;
@@ -19,12 +20,14 @@ namespace TheSTAR.GUI.Screens
         
         private Dictionary<CharacterLayerType, int> _settingData;
 
-        public void Init(CharacterType characterType)
+        public async void Init(CharacterType characterType)
         {
-            var visual = _characterVisualController.LoadArt(characterType);
+            var loadVisualTask = _characterVisualController.LoadArt(characterType);
+
+            await loadVisualTask;
             
-            layeredCharacter.Init(visual);
-            customizationPanel.Init(visual, SetPreviousElement, SetNextElement);
+            layeredCharacter.Init(loadVisualTask.Result);
+            customizationPanel.Init(loadVisualTask.Result, SetPreviousElement, SetNextElement);
             
             _settingData = new Dictionary<CharacterLayerType, int>();
             var layerTypes = EnumUtility.GetValues<CharacterLayerType>();

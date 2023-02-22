@@ -1,3 +1,4 @@
+using System;
 using Constructor;
 using TheSTAR.GUI;
 using TheSTAR.GUI.Screens;
@@ -13,6 +14,7 @@ namespace Game
     {
         [Inject] private GuiController _guiController;
         [Inject] private CharacterVisualController _characterVisualController;
+        [Inject] private AddressablesManager _addressablesManager;
 
         public GameConfig GameConfig { get; private set; }
 
@@ -23,15 +25,17 @@ namespace Game
         /// </summary>
         private void Start()
         {
-            Init();
-            TestCharacterConstructor();
+            // todo: wait init tasks
+            Init(TestCharacterConstructor);
         }
 
-        private void Init()
+        private void Init(Action callback)
         {
             GameConfig = Resources.Load<GameConfig>(GameConfigPath);
+            
             _guiController.Init();
             _characterVisualController.Init();
+            _addressablesManager.Init(callback);
         }
 
         /// <remarc>
@@ -39,6 +43,7 @@ namespace Game
         /// </remarc>
         private void TestCharacterConstructor()
         {
+            Debug.Log("TestCharacterConstructor");
             var ctorScreen = _guiController.FindScreen<ConstructorScreen>();
             ctorScreen.Init(CharacterType.Naomi);
             _guiController.Show(ctorScreen);
