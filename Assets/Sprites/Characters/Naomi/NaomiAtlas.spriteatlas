@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NaomiAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: be0615c73452b424aa21408757b349b3, type: 3}
+    - {fileID: 2800000, guid: 73cb89e09dc8e4419bcd955c1cef027b, type: 3}
+    - {fileID: 2800000, guid: 7fa8fbe3526234c6d8b3a853e953161f, type: 3}
+    - {fileID: 2800000, guid: b3d45188915634996be13df2923d07d1, type: 3}
+    - {fileID: 2800000, guid: 7230d83ded0df4f3d9026f8736452550, type: 3}
+    - {fileID: 2800000, guid: d9ad37a2aae8049218a2d4129a1f0ee0, type: 3}
+    - {fileID: 2800000, guid: c03ab9fa5ddb74e768a91f1de6c1830a, type: 3}
+    - {fileID: 2800000, guid: dd7ca6ec5eb6a4c6eb172bde08e60113, type: 3}
+    - {fileID: 2800000, guid: fbb8ae5f6343b4bcc9cc176ed483f9ce, type: 3}
+    - {fileID: 2800000, guid: 9a90a509b9a464d329a502d81512e07f, type: 3}
+    - {fileID: 2800000, guid: eeb48f0e805194aba93ce793d1b47a96, type: 3}
+    - {fileID: 2800000, guid: 35128676a0f0a42df96b28f468524b16, type: 3}
+    - {fileID: 2800000, guid: 2fd8ad43c8fe54717a05c98da02e420d, type: 3}
+    - {fileID: 2800000, guid: 954255bc677384f78a800a4d7b7a98c7, type: 3}
+    - {fileID: 2800000, guid: 99d8425e452244e7cba780d859aedec2, type: 3}
+    - {fileID: 2800000, guid: fc7c3a422dc674e6d83735186d212e76, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 73cb89e09dc8e4419bcd955c1cef027b, type: 3}
+  - {fileID: 21300000, guid: fc7c3a422dc674e6d83735186d212e76, type: 3}
+  - {fileID: 21300000, guid: d9ad37a2aae8049218a2d4129a1f0ee0, type: 3}
+  - {fileID: 21300000, guid: 2fd8ad43c8fe54717a05c98da02e420d, type: 3}
+  - {fileID: 21300000, guid: 7fa8fbe3526234c6d8b3a853e953161f, type: 3}
+  - {fileID: 21300000, guid: 35128676a0f0a42df96b28f468524b16, type: 3}
+  - {fileID: 21300000, guid: be0615c73452b424aa21408757b349b3, type: 3}
+  - {fileID: 21300000, guid: b3d45188915634996be13df2923d07d1, type: 3}
+  - {fileID: 21300000, guid: 9a90a509b9a464d329a502d81512e07f, type: 3}
+  - {fileID: 21300000, guid: c03ab9fa5ddb74e768a91f1de6c1830a, type: 3}
+  - {fileID: 21300000, guid: 954255bc677384f78a800a4d7b7a98c7, type: 3}
+  - {fileID: 21300000, guid: dd7ca6ec5eb6a4c6eb172bde08e60113, type: 3}
+  - {fileID: 21300000, guid: 7230d83ded0df4f3d9026f8736452550, type: 3}
+  - {fileID: 21300000, guid: eeb48f0e805194aba93ce793d1b47a96, type: 3}
+  - {fileID: 21300000, guid: 99d8425e452244e7cba780d859aedec2, type: 3}
+  - {fileID: 21300000, guid: fbb8ae5f6343b4bcc9cc176ed483f9ce, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - clothes1
+  - hair
+  - confusion
+  - smile
+  - clothes2
+  - shock
+  - body
+  - undewear
+  - neutral
+  - flirt
+  - yazva
+  - fuu
+  - angry
+  - sad
+  - you_die
+  - gordost
+  m_RenderDataMap: {}
+  m_Tag: NaomiAtlas
+  m_IsVariant: 0
