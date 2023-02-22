@@ -85,6 +85,10 @@ MonoBehaviour:
     m_Address: Assets/Sprites/Characters/Naomi/Hair/hair.png
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2b21636494f364c15980eef599e790dc
+    m_Address: Assets/Sprites/Characters/Naomi/NaomiAtlas.spriteatlas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6a5504a4038c0472dbb9f6ae3a2528e2, type: 2}
   m_SchemaSet:

@@ -1,4 +1,6 @@
 using System;
+using System.Threading.Tasks;
+using Addressables;
 using Constructor;
 using TheSTAR.GUI;
 using TheSTAR.GUI.Screens;
@@ -23,19 +25,21 @@ namespace Game
         /// <summary>
         /// Main logic entry point
         /// </summary>
-        private void Start()
+        private async void Start()
         {
-            // todo: wait init tasks
-            Init(TestCharacterConstructor);
+            await Init();
+            TestCharacterConstructor();
         }
 
-        private void Init(Action callback)
+        private async Task Init()
         {
             GameConfig = Resources.Load<GameConfig>(GameConfigPath);
             
             _guiController.Init();
             _characterVisualController.Init();
-            _addressablesManager.Init(callback);
+            await _addressablesManager.Init();
+
+            Debug.Log("Complete Init");
         }
 
         /// <remarc>
