@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Constructor;
 using UnityEngine;
@@ -8,7 +9,7 @@ namespace Addressables
 {
     public class AddressablesManager : MonoBehaviour
     {
-        [SerializeField] private AssetReferenceT<CharacterVisualConfig> characterVisualConfig;
+        [SerializeField] private AddressableCharacter[] addressableCharacters = new AddressableCharacter[1];
     
         public async Task Init()
         {
@@ -18,11 +19,23 @@ namespace Addressables
             await handle.Task;
         }
 
-        public async Task<CharacterVisualConfig> LoadCharacterVisual()
+        public async Task<CharacterVisualConfig> LoadCharacterVisual(CharacterType characterType)
         {
-            var handle = characterVisualConfig.LoadAssetAsync();
+            var character = Array.Find(addressableCharacters, (info) => info.CharacterType == characterType);
+            
+            var handle = character.CharacterVisualConfig.LoadAssetAsync();
             await handle.Task;
             return handle.Status == AsyncOperationStatus.Succeeded ? handle.Result : null;
+        }
+
+        [Serializable]
+        public class AddressableCharacter
+        {
+            [SerializeField] private CharacterType characterType;
+            [SerializeField] private AssetReferenceT<CharacterVisualConfig> characterVisualConfig;
+
+            public CharacterType CharacterType => characterType;
+            public AssetReferenceT<CharacterVisualConfig> CharacterVisualConfig => characterVisualConfig;
         }
     }
 }

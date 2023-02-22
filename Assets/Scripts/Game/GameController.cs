@@ -27,6 +27,8 @@ namespace Game
         /// </summary>
         private async void Start()
         {
+            Debug.Log("Main Start");
+            
             await Init();
             TestCharacterConstructor();
         }
@@ -42,9 +44,6 @@ namespace Game
             Debug.Log("Complete Init");
         }
 
-        /// <remarc>
-        /// Not for release, demo only
-        /// </remarc>
         private async void TestCharacterConstructor()
         {
             Debug.Log("TestCharacterConstructor");

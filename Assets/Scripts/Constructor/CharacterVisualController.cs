@@ -22,17 +22,13 @@ namespace Constructor
             _loadedCharacterVisuals = new Dictionary<CharacterType, CharacterVisual>();
         }
         
-        //private string ConfigPath(CharacterType characterType) => $"Configs/Characters/{characterType.ToString()}";
-        
         public async Task<CharacterVisual> LoadArt(CharacterType characterType)
         {
             if (!_loadedCharacterVisuals.Keys.Contains(characterType))
             {
-                Task<CharacterVisualConfig> task = _addressablesManager.LoadCharacterVisual();
-
-                await task;
-                
-                _loadedCharacterVisuals.Add(characterType, task.Result.Visual);
+                var loadTask = _addressablesManager.LoadCharacterVisual(characterType);
+                await loadTask;
+                _loadedCharacterVisuals.Add(characterType, loadTask.Result.Visual);
             }
             
             _currentCharacterType = characterType;
